@@ -1267,7 +1267,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-left">© 2025 Rubén Cuello — Built by hand.</div>
+  <div class="footer-left">© <span id="year"></span> Rubén Cuello — Built by hand.</div>
   <div class="footer-right">Open to remote opportunities worldwide.</div>
 </footer>
 
@@ -1304,6 +1304,8 @@
   }, { threshold: 0.4 });
 
   sections.forEach(s => navObserver.observe(s));
+
+  document.getElementById('year').textContent = Date().split(' ')[3]
 </script>
 </body>
 </html>
